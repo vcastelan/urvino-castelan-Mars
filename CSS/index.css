@@ -1,0 +1,38 @@
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  background-color: rgb(168, 167, 167);
+  color: black;
+}
+
+h1 {
+  font-weight: lighter;
+  margin-left: 35px;
+  color: rgb(46, 125, 79);
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: bolder;
+  color: rgb(39, 129, 203);
+}
+
+section {
+  background-color: rgb(138, 158, 158);
+  border: solid;
+  border-color: rgb(66, 142, 138);
+  margin: 25px;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li {
+  margin: 15px 0px;
+}
