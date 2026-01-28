@@ -27,16 +27,9 @@ h2 {
 
 /* ==== layout ===*/
 
+
+/* ==== Experience section ===*/
 #Experience h4 {
-  text-align: center;
-}
-
-.columns-experience {
-  display: flex;
-}
-
-.column {
-  margin: 0px auto;
   text-align: center;
 }
 
@@ -49,17 +42,56 @@ h2 {
   margin-top: 15px;
 }
 
+/*== using flexbox ==*/
+
+/* .columns-experience {
+  display: flex;
+}
+
+.column {
+  margin: 0px auto;
+  text-align: center;
+}
+
 .job {
   display: flex;
   justify-content: space-between;
+} */
+
+
+/* === STRETCH GOAL: using grid === */
+
+.columns-experience {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  justify-content: space-evenly;
 }
 
+.job {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  justify-content: space-between;
+}
+
+/* ==== Connect section  ===*/
 .columns-connect {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
+.img-link {
+  width: 80px;
+  /* height: auto;  */
+  transition: width 0.3s ease; /* Smooth transition for the width change */
+}
+
+.img-link:hover {
+  width: 100px; /* New, bigger width on hover */
+}
+
+
+/* ==== all section layout ===*/
 section {
   background-color: rgb(138, 158, 158);
   border: solid;
@@ -75,16 +107,6 @@ ul {
 
 #About {
   text-align: left;
-}
-
-.img-link {
-  width: 80px;
-  /* height: auto;  */
-  transition: width 0.3s ease; /* Smooth transition for the width change */
-}
-
-.img-link:hover {
-  width: 100px; /* New, bigger width on hover */
 }
 
 /* ==== Navigation bar  ===*/
@@ -115,10 +137,6 @@ a {
 a:hover {
   color: lightblue;
 }
-
-/* STRETCH GOAL: Since we learned about grid layout this week, reformat one or both of your two flexbox sections
-(Experience or Connect) to be a grid layout instead to give yourself practice using grid. */
-
 
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
