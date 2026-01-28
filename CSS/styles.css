@@ -114,3 +114,48 @@ a:hover, a:active {
 .img-link:hover {
   width: 100px; /* New, bigger width on hover */
 }
+
+/* STRETCH GOAL: Since we learned about grid layout this week, reformat one or both of your two flexbox sections
+(Experience or Connect) to be a grid layout instead to give yourself practice using grid. */
+
+/* Will make into mobile mode */
+
+/* table lanscape mode sizing */
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: rgb(1, 133, 58);
+    
+  }  
+  h2 {
+    font-size: 1.5rem;
+    color: rgb(69, 34, 197);
+  }
+
+  ul {
+    padding: 4px;
+    background-color: rgb(159, 9, 17);
+  }
+}
+
+/*  table portrait mode sizing */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    font-style: oblique 23deg;
+    color: rgb(119, 20, 93);
+  }  
+  h2 {
+    font-size: 1.3rem;
+    color: rgb(100, 119, 15);
+  }
+
+  ul {
+    padding: 2px;
+    background-color: rgb(7, 9, 82);
+  }
+}
+
+
+/*  */
