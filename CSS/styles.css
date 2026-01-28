@@ -5,10 +5,10 @@ body {
   font-style: normal;
   background-color: rgb(168, 167, 167);
   color: black;
-  margin: 0;
+  margin: 0 auto;
 }
 
-/*==== Topography ===*/
+/*==== Typography ===*/
 
 h1 {
   font-weight: lighter;
