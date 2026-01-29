@@ -63,15 +63,17 @@ h2 {
 
 .columns-experience {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  /* grid-template-columns: 100px 100px 100px 100px; */
+  grid-template-columns: repeat(4, auto);
   justify-content: space-evenly;
 }
 
 .job {
   display: grid;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
 }
+
 
 /* ==== Connect section  ===*/
 .columns-connect {
@@ -142,7 +144,7 @@ a:hover {
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
 
-/* table lanscape mode sizing */
+/* tablet landscape mode sizing */
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 1.6rem;
@@ -185,7 +187,7 @@ a:hover {
 
   .job {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
   }
 
   .columns-connect {
