@@ -33,6 +33,7 @@ const skillsSection = document.getElementById("new-Skills");
 
 //create a new variable and assign the value of the unordered list html element
 const skillsList = skillsSection.querySelector("ul");
+skillsList.className = "skills-list";
 
 //for loop that will loop through our skills array
 for (let i = 0; i < skills.length; i++) {
