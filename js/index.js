@@ -8,6 +8,7 @@ document.body.append(newFooter);
 
 //new today variable, will hold new Date object
 const today = new Date();
+
 //added a new year to our today variable
 const thisYear = today.getFullYear();
 
@@ -24,3 +25,21 @@ copyright.innerHTML = `Urvino Castelan \u{0040} ${thisYear}`;
 //append our paragraph to our footer html element
 footer.appendChild(copyright);
 
+//create an array of strings and list your "skills"
+const skills = ["Javascript", "HTML", "CSS", "Java", "Python", "Github", "C++"];
+
+//create a new variable and assign the value of skills section html section
+const skillsSection = document.getElementById("new-Skills");
+
+//create a new variable and assign the value of the unordered list html element
+const skillsList = skillsSection.querySelector("ul");
+
+//for loop that will loop through our skills array
+for (let i = 0; i < skills.length; i++) {
+  //create a new variable and assign the value of new list item html element
+  const skill = document.createElement("li");
+  //create a new list item content
+  skill.innerHTML = skills[i];
+  //add whole html element into our unordered list
+  skillsList.appendChild(skill);
+}
