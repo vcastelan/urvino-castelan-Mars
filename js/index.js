@@ -1,3 +1,4 @@
+/*===== FOOTER ====*/
 //new footer variable wil add footer element in html
 const newFooter = document.createElement('footer');
 //class="footer"
@@ -20,11 +21,13 @@ const copyright = document.createElement("p");
 
 //assign a new paragraph value to our copyright variable 
 //display your name and year. *STRETCH GOAL: use unicode to display @ symbol
-copyright.innerHTML = `Urvino Castelan \u{0040} ${thisYear}`;
+copyright.innerHTML = `\u{0040} Urvino Castelan ${thisYear}`;
 
 //append our paragraph to our footer html element
 footer.appendChild(copyright);
 
+
+/* ==== SKILLS ==== */
 //create an array of strings and list your "skills"
 const skills = ["Javascript", "HTML", "CSS", "Java", "Python", "Github", "C++"];
 
