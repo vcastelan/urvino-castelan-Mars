@@ -21,10 +21,12 @@ const copyright = document.createElement("p");
 
 //assign a new paragraph value to our copyright variable 
 //display your name and year. *STRETCH GOAL: use unicode to display @ symbol
-copyright.innerHTML = `\u{0040} Urvino Castelan ${thisYear}`;
+copyright.innerHTML = `\u00A9 Urvino Castelan ${thisYear}`;
 
 //append our paragraph to our footer html element
 footer.appendChild(copyright);
+
+footer.style.textAlign = "center";
 
 
 /* ==== SKILLS ==== */
