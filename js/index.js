@@ -38,6 +38,7 @@ const skillsSection = document.getElementById("skills");
 
 //create a new variable and assign the value of the unordered list html element
 const skillsList = skillsSection.querySelector("ul");
+//give our unordered list a class name
 skillsList.className = "skills-list";
 
 //for loop that will loop through our skills array
@@ -65,8 +66,36 @@ messageForm.addEventListener('submit', event => {
   const message = event.target.usersMessage.value;
   //console log the results of our 3 variables
   console.log(`Username: ${userName}\nEmail: ${email}\n${message}`);
+
+  /* ==== Display Messages ===== */
+  //new variable to select our messages section
+  const messsageSection = document.getElementById("messages");
+  //variable to select our unordered list in our index.html
+  const messageList = messsageSection.querySelector('ul');
+
+  //create a new variable and assign the value of a newly created element
+  const newMessage = document.createElement('li');
+  //add innerHTML to our new list item element
+  newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${message} </span>`;
+
+  //create a new button element and assign it to a new variable
+  const removeButton = document.createElement("button");
+  //add text to our button 
+  removeButton.textContent = "remove";
+  //set an attribute to our button element
+  removeButton.setAttribute("type", "button");
+  //event listener to remove the button after its been clicked.
+  removeButton.addEventListener('click', event => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+  })
+
+  //append our new remove button element to our new message unordered list
+  newMessage.appendChild(removeButton);
+  //append our new message to our new message list
+  messageList.appendChild(newMessage);
+
+
   //clear the text in our input fields after it console logs
   event.target.reset();
 });
-
-/* ==== Display Messages ===== */
