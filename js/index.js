@@ -34,7 +34,7 @@ footer.style.textAlign = "center";
 const skills = ["Javascript", "HTML", "CSS", "Java", "Python", "Github", "C++"];
 
 //create a new variable and assign the value of skills section html section
-const skillsSection = document.getElementById("new-Skills");
+const skillsSection = document.getElementById("skills");
 
 //create a new variable and assign the value of the unordered list html element
 const skillsList = skillsSection.querySelector("ul");
@@ -45,7 +45,7 @@ for (let i = 0; i < skills.length; i++) {
   //create a new variable and assign the value of new list item html element
   const skill = document.createElement("li");
   //create a new list item content
-  skill.innerHTML = skills[i];
+  skill.textContent = skills[i];
   //add whole html element into our unordered list
   skillsList.appendChild(skill);
 }

@@ -75,7 +75,7 @@ h2 {
 }
 
 /* ==== New-SKills Section ==== */
-#new-Skills ul {
+#skills ul {
   display: grid;
   grid-template-columns: repeat(7, auto);
   justify-content: space-evenly;
