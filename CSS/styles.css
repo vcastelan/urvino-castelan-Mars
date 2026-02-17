@@ -74,6 +74,18 @@ h2 {
   justify-content: space-between;
 }
 
+/* ==== New-SKills Section ==== */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  justify-content: space-evenly;
+}
+
+.skills-list {
+  list-style-type: none;
+  font-weight: bold;
+}
+
 
 /* ==== Connect section  ===*/
 .columns-connect {
@@ -103,7 +115,7 @@ section {
   padding: 1rem;
 }
 
-ul {
+.menu li {
   list-style-type: none;
   /* padding: 0px; */
 }
@@ -141,6 +153,9 @@ a:hover {
   color: lightblue;
 }
 
+/* === Footer === */
+
+
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
 
@@ -157,9 +172,12 @@ a:hover {
     color: rgb(69, 34, 197);
   }
 
+  .Navigation {
+    background-color: rgb(159, 9, 17);
+  }
+
   ul {
     padding: 4px;
-    background-color: rgb(159, 9, 17);
   }
 }
 
@@ -175,9 +193,12 @@ a:hover {
     color: rgb(100, 119, 15);
   }
 
+  .Navigation {
+    background-color: rgb(7, 9, 82);
+  }
+
   ul {
     padding: 2px;
-    background-color: rgb(7, 9, 82);
   }
 
   .columns-experience {
@@ -196,4 +217,14 @@ a:hover {
       grid-template-columns: auto;
   }
 
+  /* === New-Skills Section === */
+  #new-Skills ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  /* unordered list */
+  .skills-list li {
+    margin-top: 5px;
+  }
 }
