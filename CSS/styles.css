@@ -153,8 +153,22 @@ a:hover {
   color: lightblue;
 }
 
-/* === Footer === */
+/* === Form === */
+#Form form{
+  display: flex;
+  border: 8px solid white;
+  background: lightblue;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  margin: auto;
+  padding: 3rem 2rem;
+}
 
+/* === Messages Section === */
+
+
+/* === Footer === */
 
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
@@ -178,6 +192,10 @@ a:hover {
 
   ul {
     padding: 4px;
+  }
+
+  #Form form {
+    width: 12rem;
   }
 }
 
