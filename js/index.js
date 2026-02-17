@@ -49,3 +49,24 @@ for (let i = 0; i < skills.length; i++) {
   //add whole html element into our unordered list
   skillsList.appendChild(skill);
 }
+
+/* === Messages Form ===== */
+
+//variable to select our form
+const messageForm = document.querySelector('[name="leave_message"]');
+
+//add eventListener call back function for our form
+messageForm.addEventListener('submit', event => {
+  //prevent default refresh after submit is pressed
+  event.preventDefault();
+  //3 variables to keep track of values in form
+  const userName = event.target.usersName.value;
+  const email = event.target.usersEmail.value;
+  const message = event.target.usersMessage.value;
+  //console log the results of our 3 variables
+  console.log(`Username: ${userName}\nEmail: ${email}\n${message}`);
+  //clear the text in our input fields after it console logs
+  event.target.reset();
+});
+
+/* ==== Display Messages ===== */
