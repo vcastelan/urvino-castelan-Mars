@@ -84,7 +84,7 @@ messageForm.addEventListener('submit', event => {
   removeButton.textContent = "remove";
   //set an attribute to our button element
   removeButton.setAttribute("type", "button");
-  //event listener to remove the button after its been clicked.
+  //event listener to remove the information added to our messages from our parent node after its been clicked.
   removeButton.addEventListener('click', event => {
     const entry = removeButton.parentNode;
     entry.remove();
@@ -94,7 +94,6 @@ messageForm.addEventListener('submit', event => {
   newMessage.appendChild(removeButton);
   //append our new message to our new message list
   messageList.appendChild(newMessage);
-
 
   //clear the text in our input fields after it console logs
   event.target.reset();
