@@ -166,11 +166,27 @@ a:hover {
 }
 
 /* === Messages Section === */
-button {
+.submit-button {
   background-color: rgb(185, 253, 231);
   padding: 8px 15px;
   border-radius: 25px;
   border: 0px;
+}
+
+.edit-button {
+  background-color: rgb(68, 2, 199);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+
+.remove-button {
+  background-color: rgb(219, 0, 0);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin: 0 5px;
 }
 
 /* === Footer === */

@@ -98,10 +98,38 @@ messageForm.addEventListener('submit', event => {
   //add innerHTML to our new list item element
   newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${message} </span>`;
 
+
+  //EDIT BUTTON
+  //new Edit button to edit our messages if we choose to.
+  const editButton = document.createElement("button");
+
+  //edit button will say edit
+  editButton.innerText = "Edit";
+  editButton.className = "edit-button";
+  editButton.setAttribute("type", "button");
+
+  editButton.addEventListener('click', event => {
+    const messageSpan = newMessage.querySelector("span");
+    //if clicked open a prompt to have user input new text
+    const text = prompt("Edit your message:", messageSpan.innerText);
+   
+    //variable to select our unordered list in our index.html
+    const messageList = messsageSection.querySelector('ul');
+
+    //update the message if user puts a new message
+    if (text.trim() !== "" && text !== null) {
+      messageSpan.innerText = text;
+    }
+  });
+
+  //append the edit button on the new message list item
+  newMessage.appendChild(editButton);
+
   //create a new button element and assign it to a new variable
   const removeButton = document.createElement("button");
   //add text to our button 
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Remove";
+  removeButton.className = "remove-button";
   //set an attribute to our button element
   removeButton.setAttribute("type", "button");
   //event listener to remove the information added to our messages from our parent node after its been clicked.
