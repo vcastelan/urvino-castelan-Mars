@@ -38,6 +38,7 @@ const skillsSection = document.getElementById("skills");
 
 //create a new variable and assign the value of the unordered list html element
 const skillsList = skillsSection.querySelector("ul");
+//give our unordered list a class name
 skillsList.className = "skills-list";
 
 //for loop that will loop through our skills array
@@ -49,3 +50,103 @@ for (let i = 0; i < skills.length; i++) {
   //add whole html element into our unordered list
   skillsList.appendChild(skill);
 }
+
+//Hide messages section if no currently no messages 
+function toggleMessagesSection() {
+  //variable to select our messages section by id
+  const messageSection = document.getElementById("messages");
+  //variable to hold and choose our unoredered list 
+  const messageList = messageSection.querySelector("ul");
+  //if else to check if our unordered list has any child elements if so current display in messages section is set to empty
+  //else display elements via block style.
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  } else {
+    messageSection.style.display = "block";
+  }
+}
+
+//invoke our function to check for any messages
+toggleMessagesSection();
+
+/* === Messages Form ===== */
+
+//variable to select our form
+const messageForm = document.querySelector('[name="leave_message"]');
+
+//add eventListener call back function for our form
+messageForm.addEventListener('submit', event => {
+  //prevent default refresh after submit is pressed
+  event.preventDefault();
+
+  //3 variables to keep track of values in form
+  const userName = event.target.usersName.value;
+  const email = event.target.usersEmail.value;
+  const message = event.target.usersMessage.value;
+  //console log the results of our 3 variables
+  console.log(`Username: ${userName}\nEmail: ${email}\n${message}`);
+
+  /* ==== Display Messages ===== */
+  //new variable to select our messages section
+  const messsageSection = document.getElementById("messages");
+  //variable to select our unordered list in our index.html
+  const messageList = messsageSection.querySelector('ul');
+
+  //create a new variable and assign the value of a newly created element
+  const newMessage = document.createElement('li');
+
+  //add innerHTML to our new list item element
+  newMessage.innerHTML = `<a href="mailto:${email}">${userName}</a> <span>${message} </span>`;
+
+
+  //EDIT BUTTON
+  //new Edit button to edit our messages if we choose to.
+  const editButton = document.createElement("button");
+
+  //edit button will say edit
+  editButton.innerText = "Edit";
+  editButton.className = "edit-button";
+  editButton.setAttribute("type", "button");
+
+  editButton.addEventListener('click', event => {
+    const messageSpan = newMessage.querySelector("span");
+    //if clicked open a prompt to have user input new text
+    const text = prompt("Edit your message:", messageSpan.innerText);
+   
+    //variable to select our unordered list in our index.html
+    const messageList = messsageSection.querySelector('ul');
+
+    //update the message if user puts a new message
+    if (text.trim() !== "" && text !== null) {
+      messageSpan.innerText = text;
+    }
+  });
+
+  //append the edit button on the new message list item
+  newMessage.appendChild(editButton);
+
+  //create a new button element and assign it to a new variable
+  const removeButton = document.createElement("button");
+  //add text to our button 
+  removeButton.innerText = "Remove";
+  removeButton.className = "remove-button";
+  //set an attribute to our button element
+  removeButton.setAttribute("type", "button");
+  //event listener to remove the information added to our messages from our parent node after its been clicked.
+  removeButton.addEventListener('click', event => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+    toggleMessagesSection();
+  })
+  //append our new remove button element to our new message unordered list
+  newMessage.appendChild(removeButton);
+  //append our new message to our new message list
+  messageList.appendChild(newMessage);
+  //clear the text in our input fields after it console logs
+
+  //invoke our function to check for any messages
+  toggleMessagesSection();
+
+  event.target.reset();
+});
+
