@@ -150,3 +150,39 @@ messageForm.addEventListener('submit', event => {
   event.target.reset();
 });
 
+
+//Creating your fetch to fetch our repos in our github page
+fetch('https://api.github.com/users/vcastelan/repos')
+ .then(response => {
+  if (!response.ok) {
+    throw new Error('Request failed');
+  }
+  // Parse the response as JSON
+  return response.json(); 
+})
+.then(data => {
+  //console log our parse data
+  const repositories = data;
+  console.log(repositories); 
+
+  //Display Repositories in List
+  //created variable `projectSection` to select our projects section by id
+  const projectSection = document.getElementById("projects");
+  //created variable `projectList` to query our projectsSection to select the element
+  const projectList = projectSection.querySelector("ul");
+  // for loop to iterate over our repositories array.
+  for (let i = 0; i < repositories.length; i++) {
+    //create a new variable `project` to add a new list item
+    const project = document.createElement("li");
+    //set inner text of li element to our arrray element
+    project.textContent = repositories[i]["name"];
+    //append the project element to our projectList element
+    projectList.appendChild(project);
+  }
+
+  
+})
+.catch(error => {
+  //if no data, throw an errors
+  console.error('An error occurred:', error);
+});
