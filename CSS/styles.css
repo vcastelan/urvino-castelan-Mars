@@ -153,6 +153,42 @@ a:hover {
   color: lightblue;
 }
 
+/* === Form === */
+#form-section form{
+  display: flex;
+  border: 8px solid white;
+  background: lightblue;
+  flex-direction: column;
+  align-items: center;
+  width: 50em;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+/* === Messages Section === */
+.submit-button {
+  background-color: rgb(185, 253, 231);
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 0px;
+}
+
+.edit-button {
+  background-color: rgb(68, 2, 199);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+
+.remove-button {
+  background-color: rgb(219, 0, 0);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+
 /* === Footer === */
 
 
@@ -178,6 +214,10 @@ a:hover {
 
   ul {
     padding: 4px;
+  }
+
+  #form-section form {
+    width: 12rem;
   }
 }
 
