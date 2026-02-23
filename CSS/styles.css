@@ -203,6 +203,17 @@ a:hover {
 
 }
 
+  /* === New-Skills Section === */
+  #new-Skills ul {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  /* unordered list */
+  .skills-list li {
+    margin-top: 5px;
+  }
+
 
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
@@ -280,16 +291,5 @@ a:hover {
     border: 8px solid white;
     background: rgb(7, 9, 82);;
     color: white;
-  }
-
-  /* === New-Skills Section === */
-  #new-Skills ul {
-    display: grid;
-    grid-template-columns: auto;
-  }
-
-  /* unordered list */
-  .skills-list li {
-    margin-top: 5px;
   }
 }
