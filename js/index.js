@@ -155,17 +155,20 @@ messageForm.addEventListener('submit', event => {
 fetch('https://api.github.com/users/vcastelan/repos')
  .then(response => {
   if (!response.ok) {
-    throw new Error('Request failed');
+    throw new Error('Request failed: ', response.status);
   }
-  // Parse the response as JSON
+  // Parse the response as JSON (javascript object notation)
   return response.json(); 
 })
+//what well do with our data
 .then(data => {
-  //console log our parse data
+  //asign the value of our pulled data response to a variable
   const repositories = data;
+  //console log our parse data
   console.log(repositories); 
 
-  //Display Repositories in List
+  //Display Repositories as a List
+
   //created variable `projectSection` to select our projects section by id
   const projectSection = document.getElementById("projects");
   //created variable `projectList` to query our projectsSection to select the element
@@ -174,13 +177,12 @@ fetch('https://api.github.com/users/vcastelan/repos')
   for (let i = 0; i < repositories.length; i++) {
     //create a new variable `project` to add a new list item
     const project = document.createElement("li");
-    //set inner text of li element to our arrray element
+    //set inner text of li element to our arrray element getting name values
     project.textContent = repositories[i]["name"];
     //append the project element to our projectList element
     projectList.appendChild(project);
   }
 
-  
 })
 .catch(error => {
   //if no data, throw an errors

@@ -192,6 +192,18 @@ a:hover {
 /* === Footer === */
 
 
+/* ==== Projects-List Section  ====*/
+#projects ul {
+  background-color: lightblue;
+  border: 8px solid white;
+  list-style-type: none;
+}
+
+#projects li {
+
+}
+
+
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
 
@@ -218,6 +230,13 @@ a:hover {
 
   #form-section form {
     width: 12rem;
+    border: 8px solid white;
+    background:rgb(159, 9, 17);
+    color: white;
+  }
+
+  .submit-button {
+    background-color: rgb(136, 187, 170);
   }
 }
 
@@ -255,6 +274,12 @@ a:hover {
       display: grid;
       justify-content: space-evenly;
       grid-template-columns: auto;
+  }
+
+  #form-section form {
+    border: 8px solid white;
+    background: rgb(7, 9, 82);;
+    color: white;
   }
 
   /* === New-Skills Section === */
