@@ -154,7 +154,7 @@ a:hover {
 }
 
 /* === Form === */
-#Form form{
+#form-section form{
   display: flex;
   border: 8px solid white;
   background: lightblue;
@@ -216,7 +216,7 @@ a:hover {
     padding: 4px;
   }
 
-  #Form form {
+  #form-section form {
     width: 12rem;
   }
 }
