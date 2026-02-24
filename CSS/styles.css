@@ -194,25 +194,26 @@ a:hover {
 
 /* ==== Projects-List Section  ====*/
 #projects ul {
-  background-color: lightblue;
-  border: 8px solid white;
+  background-color: rgb(124, 160, 160);
+  border: 2px solid white;
   list-style-type: none;
 }
 
 #projects li {
-
+  margin: 10px 0px;
 }
 
-  /* === New-Skills Section === */
-  #new-Skills ul {
-    display: grid;
-    grid-template-columns: auto;
-  }
+/* === New-Skills Section === */  
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  justify-content: space-around;
+}
 
-  /* unordered list */
-  .skills-list li {
-    margin-top: 5px;
-  }
+/* unordered list */
+.skills-list li {
+  margin-top: 5px;
+}
 
 
 /* ==== Media Queries to adjust for screen sizes ==== */
