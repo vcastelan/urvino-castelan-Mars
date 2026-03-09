@@ -151,6 +151,7 @@ messageForm.addEventListener('submit', event => {
 });
 
 
+// ===PROJECTS LIST ====
 //Creating your fetch to fetch our repos in our github page
 fetch('https://api.github.com/users/vcastelan/repos')
  .then(response => {
@@ -176,15 +177,29 @@ fetch('https://api.github.com/users/vcastelan/repos')
   // for loop to iterate over our repositories array.
   for (let i = 0; i < repositories.length; i++) {
     //create a new variable `project` to add a new list item
-    const project = document.createElement("li");
-    //set inner text of li element to our arrray element getting name values
-    project.textContent = repositories[i]["name"];
-    //append the project element to our projectList element
-    projectList.appendChild(project);
-  }
+    const projectItem = document.createElement("li");
 
+    const anchorTag = document.createElement('a');
+    //set inner text of li element to our arrray element getting name values
+    if (repositories[i]["name"].includes("urvino")) {
+      //add text to our list item
+      // anchorTag.textContent = repositories[i]["name"];
+
+      //make our list item clickable
+      anchorTag.setAttribute('target', `_blank`);
+      anchorTag.setAttribute('href', `${repositories[i]["html_url"]}`);
+      
+      anchorTag.textContent = repositories[i]["name"];
+
+      projectItem.appendChild(anchorTag);
+      //append the project element to our projectList element
+      projectList.appendChild(projectItem);
+    }
+  }
 })
 .catch(error => {
   //if no data, throw an errors
   console.error('An error occurred:', error);
 });
+
+

@@ -27,7 +27,6 @@ h2 {
 
 /* ==== layout ===*/
 
-
 /* ==== Experience section ===*/
 #Experience h4 {
   text-align: center;
@@ -74,56 +73,6 @@ h2 {
   justify-content: space-between;
 }
 
-/* ==== New-SKills Section ==== */
-#skills ul {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  justify-content: space-evenly;
-}
-
-.skills-list {
-  list-style-type: none;
-  font-weight: bold;
-}
-
-
-/* ==== Connect section  ===*/
-.columns-connect {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.img-link {
-  width: 80px;
-  /* height: auto;  */
-  transition: width 0.3s ease; /* Smooth transition for the width change */
-}
-
-.img-link:hover {
-  width: 100px; /* New, bigger width on hover */
-}
-
-
-/* ==== all section layout ===*/
-section {
-  background-color: rgb(138, 158, 158);
-  border: solid;
-  border-color: rgb(66, 142, 138);
-  max-width: 100%;
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.menu li {
-  list-style-type: none;
-  /* padding: 0px; */
-}
-
-#About {
-  text-align: left;
-}
-
 /* ==== Navigation bar  ===*/
 
 .Navigation {
@@ -152,6 +101,81 @@ a {
 a:hover {
   color: lightblue;
 }
+
+/* Name & Picture section */
+#vino-pic {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+}
+
+/* ==== all section layout ===*/
+section {
+  background-color: rgb(138, 158, 158);
+  border: solid;
+  border-color: rgb(66, 142, 138);
+  max-width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.menu li {
+  list-style-type: none;
+  /* padding: 0px; */
+}
+
+/* #About {
+  text-align: left;
+} */
+
+
+/* ==== Projects-List Section  ====*/
+#projects ul {
+  background-color: rgb(124, 160, 160);
+  border: 2px solid white;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+#projects li {
+  margin: 20px 25px;
+}
+
+/* === New-Skills Section === */  
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  justify-content: space-around;
+}
+
+.skills-list {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* unordered list */
+.skills-list li {
+  margin-top: 5px;
+}
+
+/* ==== Connect section  ===*/
+.columns-connect {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.img-link {
+  width: 80px;
+  /* height: auto;  */
+  transition: width 0.3s ease; /* Smooth transition for the width change */
+}
+
+.img-link:hover {
+  width: 100px; /* New, bigger width on hover */
+}
+
 
 /* === Form === */
 #form-section form{
@@ -188,33 +212,6 @@ a:hover {
   border-radius: 25px;
   margin: 0 5px;
 }
-
-/* === Footer === */
-
-
-/* ==== Projects-List Section  ====*/
-#projects ul {
-  background-color: rgb(124, 160, 160);
-  border: 2px solid white;
-  list-style-type: none;
-}
-
-#projects li {
-  margin: 10px 0px;
-}
-
-/* === New-Skills Section === */  
-#skills ul {
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-  justify-content: space-around;
-}
-
-/* unordered list */
-.skills-list li {
-  margin-top: 5px;
-}
-
 
 /* ==== Media Queries to adjust for screen sizes ==== */
 /* Will make into laptop monitor first mode */
@@ -286,6 +283,23 @@ a:hover {
       display: grid;
       justify-content: space-evenly;
       grid-template-columns: auto;
+  }
+
+  #projects ul {
+    background-color: rgb(124, 160, 160);
+    border: 2px solid white;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #skills ul{
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  #skills li {
+    margin-top: 10px;
   }
 
   #form-section form {
